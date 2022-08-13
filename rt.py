@@ -1,7 +1,6 @@
-from telethon import TelegramClient, events
-
 import time
-import socks
+
+from telethon import TelegramClient, events
 
 from conf import config
 
@@ -22,10 +21,8 @@ class tg_watchon_class:
         self.api_id = cfg.get_API_ID()
         self.api_hash = cfg.get_API_HASH()
 
-        self.client = TelegramClient(
-            cfg.get_TG_AUTH_FILE_NAME(),
-            self.api_id,
-            self.api_hash).start()
+        self.client = TelegramClient(cfg.get_TG_AUTH_FILE_NAME(), self.api_id,
+                                     self.api_hash).start()
 
         @self.client.on(events.NewMessage)
         async def handler(event):
