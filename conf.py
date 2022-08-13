@@ -9,7 +9,7 @@ class config:
 
         config = ConfigParser()
         # 传入读取文件的地址，encoding文件编码格式，中文必须
-        config.read('/home/coder/project/python/tg-bot/telethon_get_media/zh_cn.config', encoding='UTF-8')
+        config.read('zh_cn.config', encoding='UTF-8')
         # 输出路径
         self._path = config['message_download']['DATA_DIR']
         self.picture_storage_path = config['message_download']['PIC_DIR']
