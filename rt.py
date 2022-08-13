@@ -24,7 +24,7 @@ class tg_watchon_class:
         self.client = TelegramClient(cfg.get_TG_AUTH_FILE_NAME(), self.api_id,
                                      self.api_hash).start()
 
-        @self.client.on(events.NewMessage)
+        @self.client.on(events.NewMessage(chats=5520741783))
         async def handler(event):
             print("handler init success")
             '''

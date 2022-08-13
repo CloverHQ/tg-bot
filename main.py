@@ -1,5 +1,4 @@
 from multiprocessing import Process
-import os
 import time
 
 from rt import tg_watchon_class
