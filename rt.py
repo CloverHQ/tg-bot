@@ -48,7 +48,7 @@ class tg_watchon_class:
                 filename = filename_temp
             await event.message.download_media(filename)
             os.system('php ../occ files:scan --path=tg_bot/files/video')
-            await event.reply('Hey!' + filename)
+            await event.reply(filename)
 
     def get_client(self):
         return self.client
