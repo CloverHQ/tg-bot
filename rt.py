@@ -3,6 +3,7 @@ import time
 from telethon import TelegramClient, events
 
 from conf import config
+import os
 
 # Printing download progress
 
@@ -46,6 +47,8 @@ class tg_watchon_class:
             else:
                 filename = filename_temp
             await event.message.download_media(filename)
+            os.system('php coocc files:scan --path=tg_bot/files/video')
+            await event.reply('Hey!')
 
     def get_client(self):
         return self.client
